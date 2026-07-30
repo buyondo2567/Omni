@@ -273,7 +273,7 @@ export function FlowchartCanvas({
   );
 
   const onConnect: OnConnect = useCallback(
-    (connection) => {
+    (connection: { source: string; target: string; sourceHandle?: string | null; targetHandle?: string | null }) => {
       const updated = addEdge(
         {
           ...connection,
